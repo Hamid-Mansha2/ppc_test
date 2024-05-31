@@ -3,7 +3,6 @@ language: generic
 jobs:
   include:
     - os: linux
-      name: PPC64 Test
       arch: ppc64le
       dist: focal
 
