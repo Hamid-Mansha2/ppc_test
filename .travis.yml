@@ -1,10 +1,15 @@
 language: generic
 
-jobs:
-  include:
-    - os: linux
-      arch: ppc64le
-      dist: focal
+# Specify the architecture
+arch:
+  - ppc64le
+
+dist: focal
+
+install:
+  - echo "No dependencies to install"
 
 script:
-  - echo "Running test on PPC64 architecture"
+  - echo "Testing on ppc64le architecture"
+  - uname -m
+  - echo "Running generic tests"
