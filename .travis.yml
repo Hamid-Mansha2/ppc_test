@@ -8,4 +8,4 @@ jobs:
       dist: focal
 
 script:
-  - echo "Running on PPC64 architecture"
+  - echo "Running test on PPC64 architecture"
