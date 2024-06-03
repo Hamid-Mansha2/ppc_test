@@ -1,15 +1,23 @@
 language: generic
 
-# Specify the architecture
-arch:
-  - ppc64le
-
-dist: focal
-
-install:
-  - echo "No dependencies to install"
+jobs:
+  include:
+    # Minimal job for PowerPC with Ubuntu Jammy
+    - os: linux
+      name: PPC64
+      arch: ppc64le
+      dist: jammy
+    # Minimal job for System Z with Ubuntu Jammy
+    - os: linux
+      name: S390X
+      arch: s390x
+      dist: jammy
+    # Minimal job for ARM64 with Ubuntu Jammy
+    - os: linux
+      name: ARM64
+      arch: arm64
+      dist: jammy
 
 script:
-  - echo "Testing on ppc64le architecture"
-  - uname -m
-  - echo "Running generic tests"
+  - echo "Running test script..."
+  - uname -a
